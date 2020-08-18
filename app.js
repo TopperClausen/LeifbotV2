@@ -17,9 +17,16 @@ Client.on('message', msg => {
     try {
         require('./commands/' + command + '.js').execute(msg, q);
     }catch(err) {
-        console.log("shit happens");
+        return msg.channel.send("Unkown command, try !help");
     }
 
+});
+
+Client.on('guildMemberAdd', member => {
+    let role = member.guild.roles.cache.find(r => r.name === "Peasants");
+    member.roles.add(role);
+    member.send("Welcome to the Kingdom Of Leif! 👑");
+    return;
 })
 
 Client.login("NTg0NDgwMDc1NzQ0MDE4NDYz.XeaApQ.OyfNxXNn-bPh53NX61PdiHkRwto");
