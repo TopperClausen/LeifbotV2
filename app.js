@@ -25,6 +25,7 @@ Client.on('message', msg => {
 Client.on('guildMemberAdd', member => {
     let role = member.guild.roles.cache.find(r => r.name === "Peasants");
     member.roles.add(role);
+    
     member.send("Welcome to the Kingdom Of Leif! 👑");
     return;
 })

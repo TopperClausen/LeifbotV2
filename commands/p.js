@@ -1,6 +1,7 @@
 const ytdl = require('ytdl-core');
 
 let playing = false;
+const Description = "Plays a song or adds the song to the queue";
 
 let execute = async (msg, q, skip) => {
     if(!playing) voiceChannel = msg.member.voice.channel;
@@ -36,4 +37,4 @@ let play = (q, connection, msg) => {
     connection.on('disconnect', () => q = [])
 }
 
-module.exports = { execute: execute, play: play }
+module.exports = { execute: execute, play: play, Description: Description }

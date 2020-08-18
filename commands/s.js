@@ -1,3 +1,5 @@
+const Description = "Skips the current song";
+
 let execute = async (msg, q) => {
     let channel = msg.member.voice.channel;
     let connection = await channel.join();
@@ -7,4 +9,4 @@ let execute = async (msg, q) => {
 
 }
 
-module.exports = { execute: execute }
+module.exports = { execute: execute, Description: Description}
