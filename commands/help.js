@@ -17,7 +17,8 @@ let execute = (msg) => {
 
         let embed = new Discord.MessageEmbed()
         .setTitle("Commands")
-        .setDescription(commands);
+        .setDescription(commands)
+        .setColor("#63beff");
 
         return msg.channel.send(embed);
     });
