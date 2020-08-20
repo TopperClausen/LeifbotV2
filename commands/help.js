@@ -1,10 +1,13 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const path = require('path');
 
 let execute = (msg) => {
     let commands = "";
 
-    fs.readdir('./commands/', (err, files) => {
+    let dir = path.resolve();
+
+    fs.readdir('./commands', (err, files) => {
         if(err) {
             console.log(err);
             return;
