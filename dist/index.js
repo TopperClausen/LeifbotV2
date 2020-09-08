@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const BotClient_1 = require("./client/BotClient");
+let client = new BotClient_1.Client();
+client.Init();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxrREFBNEM7QUFFNUMsSUFBSSxNQUFNLEdBQVcsSUFBSSxrQkFBTSxFQUFFLENBQUM7QUFDbEMsTUFBTSxDQUFDLElBQUksRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ2xpZW50IH0gZnJvbSAnLi9jbGllbnQvQm90Q2xpZW50JztcblxubGV0IGNsaWVudDogQ2xpZW50ID0gbmV3IENsaWVudCgpO1xuY2xpZW50LkluaXQoKTsiXX0=

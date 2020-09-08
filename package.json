@@ -1,16 +1,17 @@
 {
-  "name": "leifbotv2",
-  "version": "2.0.0",
-  "description": "A Discord bot recreated",
-  "main": "app.js",
+  "name": "LeifbotV2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ToppeRTheReal/LeifbotV2.git"
   },
-  "author": "Thomas Clausen",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ToppeRTheReal/LeifbotV2/issues"
@@ -18,7 +19,8 @@
   "homepage": "https://github.com/ToppeRTheReal/LeifbotV2#readme",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "discord.js": "^12.2.0",
-    "ytdl-core": "^3.1.2"
+    "@types/node": "^14.6.4",
+    "discord.js": "github:discordjs/discord.js",
+    "ytdl-core": "^3.2.2"
   }
 }
