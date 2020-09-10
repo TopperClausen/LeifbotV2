@@ -1,7 +1,7 @@
 import { Client } from '../client/BotClient';
 import { Client as DiscordClient, Message } from 'discord.js';
 import { prefix } from '../config';
-import { Play, Skip, Disconnect } from '../commands/play';
+import { YoutubePlayer } from './YoutubePlayer';
 
 export class CommandHandler {
     private client: Client;
@@ -12,7 +12,7 @@ export class CommandHandler {
         this.DiscordClient = discordClient;
     }
 
-    public Handle(msg: Message) : void {
+    public Handle(msg: Message, player: YoutubePlayer) : void {
         if(msg.author.id === this.DiscordClient.user.id) return;
         if(!msg.content.startsWith(prefix)) return;
             
@@ -20,11 +20,11 @@ export class CommandHandler {
         let args : Array<string> = this.GetArgs(msg.content);
 
         if(command == 'play') {
-            Play(args[0], msg, this.client);
+            player.Play(args[0], msg, this.client);
         } else if (command == 'skip'){
-            Skip(this.client, msg);
+            player.Skip(this.client, msg);
         } else if (command == 'dc') {
-            Disconnect(this.client, msg);
+            player.Disconnect(this.client, msg);
         }
     }
 

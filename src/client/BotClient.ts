@@ -1,15 +1,14 @@
-import { token, prefix } from '../config';
-import { Queue } from '../types/Queue'
+import { token } from '../config';
 import { Client as DiscordClient, Message, VoiceConnection, StreamDispatcher} from 'discord.js';
-import { Play, Skip, Disconnect } from '../commands/play';
 import { CommandHandler } from '../handlers/commandHandler';
+import { YoutubePlayer } from '../handlers/YoutubePlayer'
 
 export class Client {
     private client: DiscordClient =  new DiscordClient();
     private token: string = token;
     private commandHandler: CommandHandler = new CommandHandler(this, this.client);
+    private youtubePlayer: YoutubePlayer = new YoutubePlayer();
 
-    public Queue: Queue<string> = new Queue<string>();
     public Connection: VoiceConnection;
     public Dispatcher: StreamDispatcher;
     public isPlaying: boolean = false;
@@ -21,7 +20,7 @@ export class Client {
             console.log('READY!');
         });
 
-        this.client.on('message', (msg: Message) => this.commandHandler.Handle(msg));
+        this.client.on('message', (msg: Message) => this.commandHandler.Handle(msg, this.youtubePlayer));
 
         this.client.login(this.token);
     }
