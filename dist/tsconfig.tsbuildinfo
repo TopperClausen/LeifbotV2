@@ -211,11 +211,6 @@
         "signature": "adb4f859bf0bf3267a9572eb12f126008bb00392845d34ab4545d960be53009d",
         "affectsGlobalScope": false
       },
-      "../src/types/queue.ts": {
-        "version": "dadaa4a5ce7d131ffa7ff5c03f3a363a87ef0861f22da4a2a520675eb5aca105",
-        "signature": "1421d39930373cf7e130ec0f771c81603994669739ccb788631a676ddc842c6a",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@discordjs/collection/dist/index.d.ts": {
         "version": "7be7f76b784383fa84812ca7eb8ad10315c9d482c0d25f178645365405509d44",
         "signature": "7be7f76b784383fa84812ca7eb8ad10315c9d482c0d25f178645365405509d44",
@@ -226,29 +221,39 @@
         "signature": "2cd708c57a62996745c2e3b674eab0fecb6a3e20536fb9852a7c17e4007b9d09",
         "affectsGlobalScope": true
       },
+      "../src/handlers/commandhandler.ts": {
+        "version": "abe410ff9121136e817713296415ccdb3fa0658a121c6302b3eafc5a7e751353",
+        "signature": "e8b7c00e850b8393c364d85e219c5355d8595c77299b65663dc8018767c79010",
+        "affectsGlobalScope": false
+      },
+      "../src/types/queue.ts": {
+        "version": "dadaa4a5ce7d131ffa7ff5c03f3a363a87ef0861f22da4a2a520675eb5aca105",
+        "signature": "1421d39930373cf7e130ec0f771c81603994669739ccb788631a676ddc842c6a",
+        "affectsGlobalScope": false
+      },
       "../node_modules/ytdl-core/typings/index.d.ts": {
         "version": "0d8c2d9c6682ce5ba2b5b92ea0f155c9f06af67535ca95812e2f144788737b7d",
         "signature": "0d8c2d9c6682ce5ba2b5b92ea0f155c9f06af67535ca95812e2f144788737b7d",
         "affectsGlobalScope": false
       },
-      "../src/commands/play.ts": {
-        "version": "2181ce01616e9ad0a84bef62f6eaeb1151483acfc1dc7c99ad0df96d3b1395bf",
-        "signature": "f856dba26a313d114e2c66cdbc34c60c5ef71ed3b30a7e0af802b6cf0cb7827e",
-        "affectsGlobalScope": false
-      },
-      "../src/handlers/commandhandler.ts": {
-        "version": "85b3d1ce1b01830c63c76fdfd49d8c4c72137bc5db7c650f54c8d599240f36ac",
-        "signature": "e8b7c00e850b8393c364d85e219c5355d8595c77299b65663dc8018767c79010",
+      "../src/handlers/youtubeplayer.ts": {
+        "version": "cd9365b2562c28ceeeedf39701b38894d41f844436481ae245e21c7768102282",
+        "signature": "c787d48b096e7b65e10fb76673e40468ada6d782649f71f9ce1933408f4ce577",
         "affectsGlobalScope": false
       },
       "../src/client/botclient.ts": {
-        "version": "664866ce0d7f2ccf4ef514ccc9bd368c5d1308a4c09af2089591480e640cd484",
-        "signature": "de4a629c117edea075fcafaedf1a2b6de50b4626285350b7e25f9fd168ea758b",
+        "version": "c34c89c56beeb594fd72cae59326b255947082f6c1e33fd4e4cc57eebcb33612",
+        "signature": "c6f0604f25791e5a2477568367962dab9f95031dcaf296333998d1869981af5f",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
         "version": "0178d88dc2d27dbeb4b1f6aa537c94c8a8d76367e744dd998fb33f7b8e342a5f",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/commands/play.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/ts3.1/globals.d.ts": {
@@ -1082,10 +1087,9 @@
         "../node_modules/@types/node/ts3.4/process.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
-        "../src/commands/play.ts",
         "../src/config.ts",
         "../src/handlers/commandhandler.ts",
-        "../src/types/queue.ts"
+        "../src/handlers/youtubeplayer.ts"
       ],
       "../src/commands/play.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -1093,11 +1097,7 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/process.d.ts",
-        "../node_modules/@types/node/ts3.4/util.d.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/ytdl-core/typings/index.d.ts",
-        "../src/client/botclient.ts",
-        "../src/types/queue.ts"
+        "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
       "../src/config.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -1116,8 +1116,19 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
         "../src/client/botclient.ts",
-        "../src/commands/play.ts",
         "../src/config.ts"
+      ],
+      "../src/handlers/youtubeplayer.ts": [
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/process.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/process.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/ytdl-core/typings/index.d.ts",
+        "../src/client/botclient.ts",
+        "../src/types/queue.ts"
       ],
       "../src/index.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -2008,15 +2019,16 @@
       ],
       "../src/client/botclient.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
-        "../src/types/queue.ts"
-      ],
-      "../src/commands/play.ts": [
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../src/client/botclient.ts"
+        "../src/handlers/youtubeplayer.ts"
       ],
       "../src/handlers/commandhandler.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
         "../src/client/botclient.ts"
+      ],
+      "../src/handlers/youtubeplayer.ts": [
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/client/botclient.ts",
+        "../src/types/queue.ts"
       ],
       "../../../../../../usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -2407,6 +2419,7 @@
       "../src/commands/play.ts",
       "../src/config.ts",
       "../src/handlers/commandhandler.ts",
+      "../src/handlers/youtubeplayer.ts",
       "../src/index.ts",
       "../src/types/queue.ts",
       "../../../../../../usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts",

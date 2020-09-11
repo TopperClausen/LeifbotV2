@@ -7,7 +7,8 @@ export class Client {
     private client: DiscordClient =  new DiscordClient();
     private token: string = token;
     private commandHandler: CommandHandler = new CommandHandler(this, this.client);
-    private youtubePlayer: YoutubePlayer = new YoutubePlayer();
+    
+    public youtubePlayer: YoutubePlayer = new YoutubePlayer();
 
     public Connection: VoiceConnection;
     public Dispatcher: StreamDispatcher;
@@ -20,7 +21,7 @@ export class Client {
             console.log('READY!');
         });
 
-        this.client.on('message', (msg: Message) => this.commandHandler.Handle(msg, this.youtubePlayer));
+        this.client.on('message', (msg: Message) => this.commandHandler.Handle(msg));
 
         this.client.login(this.token);
     }
