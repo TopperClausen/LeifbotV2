@@ -25,4 +25,8 @@ export class Client {
 
         this.client.login(this.token);
     }
+
+    public RegisterActivity(msg: Message): void {
+        
+    }
 }

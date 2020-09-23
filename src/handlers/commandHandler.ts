@@ -12,6 +12,8 @@ export class CommandHandler {
     }
 
     public Handle(msg: Message) : void {
+        this.client.RegisterActivity(msg);
+
         if(msg.author.id === this.DiscordClient.user.id) return;
         if(!msg.content.startsWith(prefix)) return;
             
