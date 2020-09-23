@@ -1,5 +1,5 @@
 import { token } from '../config';
-import { Client as DiscordClient, Message, VoiceConnection, StreamDispatcher} from 'discord.js';
+import { Client as DiscordClient, Message, VoiceConnection, StreamDispatcher, GuildMember} from 'discord.js';
 import { CommandHandler } from '../handlers/commandHandler';
 import { YoutubePlayer } from '../handlers/YoutubePlayer'
 
@@ -22,11 +22,15 @@ export class Client {
         });
 
         this.client.on('message', (msg: Message) => this.commandHandler.Handle(msg));
+        this.client.on('guildMemberAdd', (member: GuildMember) => this.OnMemberJoin(member))
 
         this.client.login(this.token);
     }
 
-    public RegisterActivity(msg: Message): void {
-        
+    private OnMemberJoin(member: GuildMember): void {
+        let role = member.guild.roles.cache.find(role => role.name.toLowerCase() == 'peasants');
+        member.roles.add(role);
+
+        member.send('Welcome to the kingdom of Leif, you peasant');
     }
 }
