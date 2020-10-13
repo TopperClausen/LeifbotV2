@@ -1,4 +1,4 @@
-import { token } from '../config';
+import { token, welcomeRole } from '../config';
 import { Client as DiscordClient, Message, VoiceConnection, StreamDispatcher, GuildMember} from 'discord.js';
 import { CommandHandler } from '../handlers/commandHandler';
 import { YoutubePlayer } from '../handlers/YoutubePlayer'
@@ -28,9 +28,9 @@ export class Client {
     }
 
     private OnMemberJoin(member: GuildMember): void {
-        let role = member.guild.roles.cache.find(role => role.name.toLowerCase() == 'peasants');
+        let role = member.guild.roles.cache.find(role => role.name.toLowerCase() == welcomeRole);
         member.roles.add(role);
 
-        member.send('Welcome to the kingdom of Leif, you peasant');
+        member.send('Welcome to The Kingdom Of Leif!');
     }
 }
