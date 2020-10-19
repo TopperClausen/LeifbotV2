@@ -23,6 +23,15 @@ export class CommandHandler {
         else if (command == 'skip')     this.client.youtubePlayer.Skip(this.client, msg);
         else if (command == 'dc')       this.client.youtubePlayer.Disconnect(this.client, msg);
 
+        if      (msg.author.id == '347896333568311296') {
+            if(msg.channel.id != '767657671008321536') {
+                setTimeout(function() {
+                    msg.delete();
+                }, 30000);
+                msg.author.send('You have been rate limited, youre message will be deleted in 30 secs. You can use the "rate-limited" room if you dont want youre messages deleted');
+            }
+        }
+
     }
 
     private GetArgs(command: string): Array<string> {
