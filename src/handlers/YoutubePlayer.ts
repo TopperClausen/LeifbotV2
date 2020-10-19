@@ -1,11 +1,14 @@
 import { Queue } from '../types/Queue'
 import { Client } from '../client/BotClient';
-import { Message } from 'discord.js';
+import { Message, VoiceConnection, StreamDispatcher } from 'discord.js';
 import ytdl from 'ytdl-core';
 
 export class YoutubePlayer {
 
     public Queue: Queue<string> = new Queue<string>();
+    public Connection: VoiceConnection;
+    public Dispatcher: StreamDispatcher;
+    public isPlaying: boolean = false;
 
     public Play = async (url: string, msg: Message, client: Client) => {
         if(!msg.member.voice.channel) {
@@ -13,15 +16,15 @@ export class YoutubePlayer {
             return;
         }
     
-        client.Connection = await msg.member.voice.channel.join();
-        if(client.isPlaying) {
+        this.Connection = await msg.member.voice.channel.join();
+        if(this.isPlaying) {
             this.Queue.Push(url);
             msg.channel.send('Song added to the queue');
             return;
         }
     
         this.Queue.Push(url);
-        client.isPlaying = true;
+        this.isPlaying = true;
         this.Player(client, msg);
         return;
     }
@@ -33,23 +36,23 @@ export class YoutubePlayer {
 
     private Player = (client: Client, msg: Message ) => {
         if(this.Queue.GetLength() == 0) {
-            client.Connection.disconnect();
-            client.Connection = undefined;
+            this.Connection.disconnect();
+            this.Connection = undefined;
             return;
         }
     
-        client.Dispatcher = client.Connection.play(ytdl(this.Queue.Pop()));
-        client.Dispatcher.on('finish', () => {
+        this.Dispatcher = this.Connection.play(ytdl(this.Queue.Pop()));
+        this.Dispatcher.on('finish', () => {
             this.Player(client, msg);
         });
     }
 
     public Disconnect = (client: Client, msg: Message) => {
-        client.Dispatcher = undefined;
-        client.Connection.disconnect();
-        client.Connection = undefined;
+        this.Dispatcher = undefined;
+        this.Connection.disconnect();
+        this.Connection = undefined;
         this.Queue = new Queue<string>();
-        client.isPlaying = false;
+        this.isPlaying = false;
     
         msg.channel.send('Disconnected');
     }

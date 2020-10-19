@@ -207,8 +207,8 @@
         "affectsGlobalScope": true
       },
       "../src/config.ts": {
-        "version": "b4a09cb48c9c248684a2cf6c4f82e9c4007ce353afc653a297e6860ae69a68b1",
-        "signature": "adb4f859bf0bf3267a9572eb12f126008bb00392845d34ab4545d960be53009d",
+        "version": "10fcdd31e183b3167bc5e29617b517ab4051d5d86c8a292f197c71b43c88c97d",
+        "signature": "ac96baf0a2830590ffd03d0fea0ef8117e09e3b1dbaa72a861eebd4388792e41",
         "affectsGlobalScope": false
       },
       "../node_modules/@discordjs/collection/dist/index.d.ts": {
@@ -217,18 +217,18 @@
         "affectsGlobalScope": false
       },
       "../node_modules/discord.js/typings/index.d.ts": {
-        "version": "2cd708c57a62996745c2e3b674eab0fecb6a3e20536fb9852a7c17e4007b9d09",
-        "signature": "2cd708c57a62996745c2e3b674eab0fecb6a3e20536fb9852a7c17e4007b9d09",
+        "version": "3e0c924c29dcc8645a2d881e0b5cb919c88fe4f46208fe118ee90b426576d16a",
+        "signature": "3e0c924c29dcc8645a2d881e0b5cb919c88fe4f46208fe118ee90b426576d16a",
         "affectsGlobalScope": true
       },
       "../src/handlers/commandhandler.ts": {
-        "version": "abe410ff9121136e817713296415ccdb3fa0658a121c6302b3eafc5a7e751353",
-        "signature": "e8b7c00e850b8393c364d85e219c5355d8595c77299b65663dc8018767c79010",
+        "version": "2519523563ae9ef726a8a74c951cac2d351f8582a37069b88e9560acf435f3b3",
+        "signature": "5a49d0192f11252fe7131ef5f9ba3678499ba7c7a178f18a0063cd80c074740c",
         "affectsGlobalScope": false
       },
       "../src/types/queue.ts": {
-        "version": "dadaa4a5ce7d131ffa7ff5c03f3a363a87ef0861f22da4a2a520675eb5aca105",
-        "signature": "1421d39930373cf7e130ec0f771c81603994669739ccb788631a676ddc842c6a",
+        "version": "2372017cd1546aec035a4b47fc028fd48e8bc36ab09f49f328029ae07ff24342",
+        "signature": "e207ba6180b3fa0deeeb64d16783ba66ad3b83d164d9dc6d63792d22d0c3b71c",
         "affectsGlobalScope": false
       },
       "../node_modules/ytdl-core/typings/index.d.ts": {
@@ -237,13 +237,18 @@
         "affectsGlobalScope": false
       },
       "../src/handlers/youtubeplayer.ts": {
-        "version": "cd9365b2562c28ceeeedf39701b38894d41f844436481ae245e21c7768102282",
-        "signature": "c787d48b096e7b65e10fb76673e40468ada6d782649f71f9ce1933408f4ce577",
+        "version": "44b8fee1b6b4435b7ef9e0eb320f1e5733e767ce7dce7aeddeae1685a506ebf8",
+        "signature": "68e0fa946a8a42a320f17d794a85b5d6984c3f0fd5064b8392b0a6b8d51ed598",
+        "affectsGlobalScope": false
+      },
+      "../src/types/dbaccess.ts": {
+        "version": "74294f46f815e651d933b02125c5244150a7ddc547169e7f88e9f9d32f64f3c7",
+        "signature": "83b27aa76f77323e66cccf9bb2b8c5bde52306c4d41ee07b774ac28f55c3c644",
         "affectsGlobalScope": false
       },
       "../src/client/botclient.ts": {
-        "version": "c34c89c56beeb594fd72cae59326b255947082f6c1e33fd4e4cc57eebcb33612",
-        "signature": "c6f0604f25791e5a2477568367962dab9f95031dcaf296333998d1869981af5f",
+        "version": "198f5ab2aaace97f72438832bfe61c0c855e50184d524036c100abef212763bb",
+        "signature": "4319e6451fa2ff60dbae3577d2cf19779eb15830f6aa97152f2509c330324819",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
@@ -1089,7 +1094,8 @@
         "../node_modules/discord.js/typings/index.d.ts",
         "../src/config.ts",
         "../src/handlers/commandhandler.ts",
-        "../src/handlers/youtubeplayer.ts"
+        "../src/handlers/youtubeplayer.ts",
+        "../src/types/dbaccess.ts"
       ],
       "../src/commands/play.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -1138,6 +1144,14 @@
         "../node_modules/@types/node/ts3.4/process.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/client/botclient.ts"
+      ],
+      "../src/types/dbaccess.ts": [
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/process.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/process.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
       "../src/types/queue.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -2018,8 +2032,8 @@
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
       "../src/client/botclient.ts": [
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../src/handlers/youtubeplayer.ts"
+        "../src/handlers/youtubeplayer.ts",
+        "../src/types/dbaccess.ts"
       ],
       "../src/handlers/commandhandler.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
@@ -2421,6 +2435,7 @@
       "../src/handlers/commandhandler.ts",
       "../src/handlers/youtubeplayer.ts",
       "../src/index.ts",
+      "../src/types/dbaccess.ts",
       "../src/types/queue.ts",
       "../../../../../../usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts",
       "../../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",

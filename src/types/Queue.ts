@@ -1,11 +1,11 @@
 export class Queue<T> {
     private _store: T[] = Array<T>();
     
-    Push(value: T) {
+    Push(value: T) : void {
         this._store.push(value);
     }
 
-    Pop(): T | undefined {
+    Pop(): T {
         return this._store.shift();
     }
 
