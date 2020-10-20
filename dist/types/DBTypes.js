@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rate_limited = exports.tokens = void 0;
+class tokens {
+}
+exports.tokens = tokens;
+class rate_limited {
+}
+exports.rate_limited = rate_limited;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiREJUeXBlcy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy90eXBlcy9EQlR5cGVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLE1BQWEsTUFBTTtDQUlsQjtBQUpELHdCQUlDO0FBRUQsTUFBYSxZQUFZO0NBRXhCO0FBRkQsb0NBRUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgdG9rZW5zIHtcbiAgICBJRDogbnVtYmVyO1xuICAgIG5hbWU6IHN0cmluZztcbiAgICB0b2tlbjogc3RyaW5nO1xufVxuXG5leHBvcnQgY2xhc3MgcmF0ZV9saW1pdGVkIHtcbiAgICBkaXNjb3JkSUQgOiBzdHJpbmc7XG59Il19

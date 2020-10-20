@@ -207,8 +207,8 @@
         "affectsGlobalScope": true
       },
       "../src/config.ts": {
-        "version": "10fcdd31e183b3167bc5e29617b517ab4051d5d86c8a292f197c71b43c88c97d",
-        "signature": "ac96baf0a2830590ffd03d0fea0ef8117e09e3b1dbaa72a861eebd4388792e41",
+        "version": "49e3c975e073782fc2efcc69d347b08a2b107c70a1833e4d28fc672158d29e10",
+        "signature": "16f4b8fe02217a8973e1401da2b008383dc7ed25e491405e42fb529b49184d2e",
         "affectsGlobalScope": false
       },
       "../node_modules/@discordjs/collection/dist/index.d.ts": {
@@ -221,9 +221,19 @@
         "signature": "3e0c924c29dcc8645a2d881e0b5cb919c88fe4f46208fe118ee90b426576d16a",
         "affectsGlobalScope": true
       },
+      "../src/types/dbtypes.ts": {
+        "version": "1bb275669583784b959abb819c48092b4ccaba008a64db17d7000077b13683f1",
+        "signature": "620256050f285d2202bd75b71a8a4a37e4f1c78f8d53b21dceae18e5d9eabee0",
+        "affectsGlobalScope": false
+      },
+      "../src/commands/ratelimiter.ts": {
+        "version": "46c0a0f0da7d09b8731481d26ec836e862d1fdd7b4a10d8e438c8710c80c5520",
+        "signature": "e6fa6132be79b70143c4f65d7689f930e8a739453fe1f079486c99aedba092cc",
+        "affectsGlobalScope": false
+      },
       "../src/handlers/commandhandler.ts": {
-        "version": "2519523563ae9ef726a8a74c951cac2d351f8582a37069b88e9560acf435f3b3",
-        "signature": "5a49d0192f11252fe7131ef5f9ba3678499ba7c7a178f18a0063cd80c074740c",
+        "version": "3c92d5e374d186a51175469176f1f517a4aa1911536380c73ecc034526c1cb9c",
+        "signature": "6222b26101be8c692d8818de91768b327c2ba2a3ad61f9a2b8f6d95c78a84c5d",
         "affectsGlobalScope": false
       },
       "../src/types/queue.ts": {
@@ -247,7 +257,7 @@
         "affectsGlobalScope": false
       },
       "../src/client/botclient.ts": {
-        "version": "198f5ab2aaace97f72438832bfe61c0c855e50184d524036c100abef212763bb",
+        "version": "d1cc056b9ee9e69eb6359be571c24b0237ea94e23ce358cba6b101c43c77c332",
         "signature": "4319e6451fa2ff60dbae3577d2cf19779eb15830f6aa97152f2509c330324819",
         "affectsGlobalScope": false
       },
@@ -1095,7 +1105,8 @@
         "../src/config.ts",
         "../src/handlers/commandhandler.ts",
         "../src/handlers/youtubeplayer.ts",
-        "../src/types/dbaccess.ts"
+        "../src/types/dbaccess.ts",
+        "../src/types/dbtypes.ts"
       ],
       "../src/commands/play.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -1104,6 +1115,17 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/process.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "../src/commands/ratelimiter.ts": [
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/process.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/process.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/handlers/commandhandler.ts",
+        "../src/types/dbtypes.ts"
       ],
       "../src/config.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -1122,6 +1144,7 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
         "../src/client/botclient.ts",
+        "../src/commands/ratelimiter.ts",
         "../src/config.ts"
       ],
       "../src/handlers/youtubeplayer.ts": [
@@ -1146,6 +1169,14 @@
         "../src/client/botclient.ts"
       ],
       "../src/types/dbaccess.ts": [
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/process.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/process.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "../src/types/dbtypes.ts": [
         "../node_modules/@types/node/ts3.1/fs.d.ts",
         "../node_modules/@types/node/ts3.1/process.d.ts",
         "../node_modules/@types/node/ts3.1/util.d.ts",
@@ -2035,9 +2066,14 @@
         "../src/handlers/youtubeplayer.ts",
         "../src/types/dbaccess.ts"
       ],
+      "../src/commands/ratelimiter.ts": [
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/handlers/commandhandler.ts"
+      ],
       "../src/handlers/commandhandler.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
-        "../src/client/botclient.ts"
+        "../src/client/botclient.ts",
+        "../src/commands/ratelimiter.ts"
       ],
       "../src/handlers/youtubeplayer.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
@@ -2431,11 +2467,13 @@
       "../node_modules/ytdl-core/typings/index.d.ts",
       "../src/client/botclient.ts",
       "../src/commands/play.ts",
+      "../src/commands/ratelimiter.ts",
       "../src/config.ts",
       "../src/handlers/commandhandler.ts",
       "../src/handlers/youtubeplayer.ts",
       "../src/index.ts",
       "../src/types/dbaccess.ts",
+      "../src/types/dbtypes.ts",
       "../src/types/queue.ts",
       "../../../../../../usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts",
       "../../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",
